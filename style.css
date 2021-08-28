@@ -1,0 +1,55 @@
+body {
+    background: linear-gradient(#000000, #737B80);
+}
+.container {
+    margin: auto;
+    height: 100vh;
+    width: 100vh;
+    display: grid;
+    flex-direction: row;
+    grid-template-rows: [row1-start] 25% [row1-end] 50% [third-line] auto;
+    align-items: center;
+    justify-content: center;
+    font-family:'Roboto',sans-serif;
+}
+.buttonContainer { 
+    width: 50vh;
+    display: flex; 
+    justify-content: space-between;
+}
+.playerSelection {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#737B80;
+    text-align:center;
+    transition: all 0.2s;
+}
+.playerSelection:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+.score {
+    color: white;
+    width: 200px;
+    padding-left: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.playContainer {
+    display: flex;
+    justify-content: center;
+}
+#roundPlay {
+    font-size: 24px;
+    color: white;
+}

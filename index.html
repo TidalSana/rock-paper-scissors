@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
+  <title>RPS - Game</title>
   <meta charset="UTF-8"/>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <script src="script.js" defer></script>
+  <div class="container">
+    <div class="score">
+      <p id="player">Player: </p>
+      <p id="computer">Computer: </p>
+    </div>
+    <div class="playContainer">
+      <p id="roundPlay"></p>
+    </div>
+    <div class="pictures">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </div>
+    <div class="buttonContainer">
+      <button id="1" class="playerSelection">Rock</button>
+      <button id="2" class="playerSelection">Paper</button>
+      <button id="3" class="playerSelection">Scissors</button>
+    </div>
+  </div>  
 </body>
 </html>
