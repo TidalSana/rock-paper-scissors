@@ -3,7 +3,7 @@ let choices = ["rock", "paper", "scissors"];
 let playerScore = 0;
 let computerScore = 0;
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.playerSelection');
 const playerP = document.getElementById('player');
 const computerP = document.getElementById('computer'); 
 const roundPlay = document.getElementById('roundPlay')

@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:ital,wght@1,100&display=swap');
 body {
-    background: linear-gradient(#000000, #737B80);
+    background: linear-gradient(#cccccc, #f5f5f5);
 }
 .container {
     margin: auto;
     height: 100vh;
-    width: 100vh;
+    min-width:
+    max-width: 100vh;
     display: grid;
     flex-direction: row;
     grid-template-rows: [row1-start] 25% [row1-end] 50% [third-line] auto;
@@ -20,23 +22,25 @@ body {
 .playerSelection {
     display:inline-block;
     padding:0.35em 1.2em;
-    border:0.1em solid #FFFFFF;
+    border:0.1em solid #DECBC8;
     margin:0 0.3em 0.3em 0;
     border-radius:0.12em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;
-    color:#737B80;
+    background-color: white;
+    color: black;
     text-align:center;
     transition: all 0.2s;
 }
 .playerSelection:hover{
-    color:#000000;
-    background-color:#FFFFFF;
+    color: black;
+    background-color:#F5F5F5;
 }
 .score {
-    color: white;
+    color: black;
+    font-family: 'Raleway', sans-serif;
     width: 200px;
     padding-left: 20px;
     position: absolute;
@@ -51,5 +55,6 @@ body {
 }
 #roundPlay {
     font-size: 24px;
-    color: white;
+    color: black;
+    font-family: 'Raleway', sans-serif;
 }
