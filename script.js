@@ -3,29 +3,62 @@ let choices = ["rock", "paper", "scissors"];
 let playerScore = 0;
 let computerScore = 0;
 
-const buttons = document.querySelectorAll('.playerSelection');
+const img = document.querySelectorAll('.playerSelection');
+const pRock = document.getElementById('p-rock');
+const pPaper = document.getElementById('p-paper');
+const pScissors = document.getElementById('p-scissors');
+const cRock = document.getElementById('c-rock');
+const cPaper = document.getElementById('c-paper');
+const cScissors = document.getElementById('c-scissors');
+const computerDiv = document.getElementById('computer-pick');
 const playerP = document.getElementById('player');
 const computerP = document.getElementById('computer'); 
 const roundPlay = document.getElementById('roundPlay')
 
-buttons.forEach((button) => {
+img.forEach((button) => {
   button.addEventListener('click', () => {
-    if(button.id === "1") {
-      playerSelection = "rock";
-    } else if (button.id === "2") {
-      playerSelection = "paper";
-    } else {
-      playerSelection = "scissors";
-    }
-    game();
+        if(button.id === "1") {
+            playerSelection = "rock";
+            pRock.classList.add('show');
+            pPaper.classList.remove('show');
+            pScissors.classList.remove('show');
+        } else if (button.id === "2") {
+            playerSelection = "paper";
+            pRock.classList.remove('show');
+            pPaper.classList.add('show');
+            pScissors.classList.remove('show');
+        } else {
+            playerSelection = "scissors";
+            pRock.classList.remove('show');
+            pPaper.classList.remove('show');
+            pScissors.classList.add('show');
+        }
+        game();
   });
 });
 
 let game = function() {
     let randomAnswer = choices[Math.floor(Math.random()*choices.length)];
     let computerSelection = randomAnswer;
+    if (computerSelection === "rock") {
+        cRock.classList.add('show');
+        cPaper.classList.remove('show');
+        cScissors.classList.remove('show');
+    } else if (computerSelection === "paper") {
+        cRock.classList.remove('show');
+        cPaper.classList.add('show');
+        cScissors.classList.remove('show');
+    } else {
+        cRock.classList.remove('show');
+        cPaper.classList.remove('show');
+        cScissors.classList.add('show');
+    }
     
-    playRound(playerSelection, computerSelection)
+    // setTimeout(function() {
+    //     playRound(playerSelection, computerSelection);
+    // }, 1000);
+    playRound(playerSelection, computerSelection);
+
     playerP.textContent = "Player: " + playerScore;
     computerP.textContent = "Computer: " + computerScore;
    

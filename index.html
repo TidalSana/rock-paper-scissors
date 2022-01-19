@@ -7,19 +7,38 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="container">
+  <header>
+    <div class="title"><h1 id="TTT">🤘 🧻 ✂</h1></div>        
+  </header>
+  <section>
     <div class="score">
       <p id="player">Player: </p>
       <p id="computer">Computer: </p>
     </div>
-    <div class="playContainer">
-      <p id="roundPlay"></p>
+    <div class="container">
+      <div class="playContainer">
+        <p id="roundPlay"></p>
+      </div>
     </div>
+  </section>
+  <div class="picks">
+    <div id="player-pick">
+      <img class="player-images" id="p-rock" src="./img/punch-blast.svg" alt="" srcset="">
+      <img class="player-images" id="p-paper" src="./img/paper.svg" alt="" srcset="">
+      <img class="player-images" id="p-scissors" src="./img/scissors.svg" alt="" srcset="">
+    </div>
+    <div id="computer-pick">
+      <img class="computer-images" id="c-rock" src="./img/punch-blast.svg" alt="" srcset="">
+      <img class="computer-images" id="c-paper" src="./img/paper.svg" alt="" srcset="">
+      <img class="computer-images" id="c-scissors" src="./img/scissors.svg" alt="" srcset="">
+    </div>
+  </div>
+  <main>
     <div class="buttonContainer">
-      <img id="1" class="playerSelection" src="">
-      <img id="2" class="playerSelection" src="">
-      <img id="3" class="playerSelection" src="">
-    </div>
-  </div>  
+      <img id="1" class="playerSelection" src="./img/punch-blast.svg">
+      <img id="2" class="playerSelection" src="./img/paper.svg">
+      <img id="3" class="playerSelection" src="./img/scissors.svg">
+    </div> 
+  </main>
 </body>
 </html>
